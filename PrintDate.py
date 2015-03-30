@@ -2,8 +2,7 @@
 # William Thing
 #
 # This script will print the local time
-# and display a calendar. Currently set print
-# March 2015 Calendar.
+# and display a calendar based on local time
 
 import time
 import calendar
@@ -11,6 +10,11 @@ import calendar
 localtime = time.asctime(time.localtime(time.time()))
 print "Local current time :", localtime
 
-cal = calendar.month(2015, 3)
+lst = localtime.split()
+month_str = ['Jan', 'Feb', 'Mar', 'Apr', 'May', "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]	
+
+month = month_str.index(lst[1]) + 1
+year = int(lst[len(lst)-1])
+cal = calendar.month(year, month)
 print "Here is the calendar:"
 print cal;
