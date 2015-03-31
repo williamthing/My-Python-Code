@@ -1,4 +1,4 @@
-# Admissions Program
+# Admissions
 
 This program will compare two different applicants
 taking in either their ACT or SAT score and overall
