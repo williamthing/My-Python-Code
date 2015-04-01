@@ -56,7 +56,9 @@ class EightQueensBoard:
             if self.__queens[queen].__cmp__(self.__queens[queen+other+1]) == 0:
                return False
       return True
-           
+
+# named Point because made more sense, but could change to Queen
+# But for now interchangeable in references
 class Point:
    __x = 0
    __y = 0
