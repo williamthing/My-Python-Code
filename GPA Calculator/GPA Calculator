@@ -2,7 +2,8 @@
 # William Thing
 # GPA Calculator
 #
-#
+# This program determines your overall GPA by calculating your current
+# GPA and your current classes, with estimated outcome and credit amount.
 
 def main():
 	curr_GPA = float(raw_input("What is your current GPA? "))
