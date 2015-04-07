@@ -12,19 +12,22 @@ def main():
 	input_GPA = 0.0
 	input_cr = 0
 	while counter < num_classes:
-		input_GPA += float(raw_input("What is your estimated GPA for the class? "))
-		input_cr += int(raw_input("What is the credit amount for that class? "))
-		counter += 1;	
-	
-	# done computing GPA/Credit of current quarter now need to calc overall GPA	
+		local_GPA = float(raw_input("What is your estimated GPA for the class? "))
+		local_cr = int(raw_input("What is the credit amount for that class? "))
+		input_cr += local_cr
+		input_GPA += local_GPA * local_cr
+		counter += 1;
+
+	# done computing GPA/Credit of current quarter now need to calc overall GPA
+	input_GPA = input_GPA / input_cr
 	total_cr = curr_cr + input_cr
-	print total_cr
+	#print "this is the total cr", total_cr
+	#print "this is the input cr", input_cr
 	input_weight = input_GPA * input_cr / total_cr
-	print input_weight
+	#print input_weight
 	curr_weight = curr_GPA * curr_cr / total_cr
-	print curr_weight
+	#print curr_weight
 	total_GPA = input_weight + curr_weight
-	print "Your GPA will be", total_GPA
+	print "Your overall GPA will be %.2f" % total_GPA
 
 if __name__ == "__main__": main()
-
