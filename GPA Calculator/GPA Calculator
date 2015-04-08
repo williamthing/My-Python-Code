@@ -3,7 +3,11 @@
 # GPA Calculator
 #
 # This program determines your overall GPA by calculating your current
-# GPA and your current classes, with estimated outcome and credit amount.
+# GPA and your current classes and credits.
+#
+# Note to Self: try to expand this idea by creating a python script
+# to scrape the information from UW Catalog, and be able just to input
+# course ID like EE215 and CSE414.
 
 def main():
 	curr_GPA = float(raw_input("What is your current GPA? "))
