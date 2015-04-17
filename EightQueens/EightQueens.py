@@ -123,8 +123,9 @@ def main():
    q.add(pointy3)
    q.add(pointy3)
    print q.can_attack()
-   q.resize(6)
-   q.about()
+   # need to fix methods below because of errors
+   #q.resize(6)	
+   #q.about()
    
 
    
